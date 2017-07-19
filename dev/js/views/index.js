@@ -1,7 +1,11 @@
-import React, { Component } from 'react';
+// import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 
-// const { Component } = React;
+const { Component } = React;
+
+if (module.hot) {
+	module.hot.accept()
+}
 
 class Index extends Component {
 	constructor(props) {
@@ -14,9 +18,6 @@ class Index extends Component {
 		};
 	}
 
-
-
-
 	sum() {
 		const counter = this.state.counter + 1;
 
@@ -28,7 +29,7 @@ class Index extends Component {
 			<div>
 				Counter: { this.state.counter }
 				<button onClick={ () => this.sum() }>Click Me!!!!!</button>
-				holasdasd
+				<span>f</span>
 			</div>
 		);
 	}

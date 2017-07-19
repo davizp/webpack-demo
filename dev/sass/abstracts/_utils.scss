@@ -1,0 +1,62 @@
+/*
+// Utilities
+// ------------------------------------------------ */
+
+/*==== General ====*/
+  .pull-right { float: right; }
+  .pull-left { float: left; }
+  .pull-none { float: none; }
+  .clearfix {
+    &:before,
+    &:after {
+      content: " ";
+      display: table;
+    }
+    &:after {
+      clear: both;
+    }
+  }
+
+/*==== Postitioning ====*/
+  .center { margin: auto auto; }
+  .txt-center { text-align: center; }
+  .txt-right  { text-align: right;  }
+  .txt-left   { text-align: left;   }
+
+/*==== Toggling content ====*/
+  .hide { display: none; }
+  .show { display: block; }
+  .invisible { visibility: hidden; }
+  .muted { opacity: .7; }
+  .no-flow {
+    position: fixed;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+  }
+  .xflow { overflow-x: scroll; -webkit-overflow-scrolling: touch; }
+  .no-flow-x { overflow-x: hidden; }
+
+/*==== Positioning ====*/
+  .affix { position: fixed; }
+  .pr { position: relative; }
+  .center { margin: auto auto; }
+
+/*==== Inline Block ====*/
+  .ib {
+    display: inline-block;
+    vertical-align: middle;
+  }
+/*==== Flexbox ====*/
+  .flex { display: flex; }
+
+/*==== Images ====*/
+  .img-responsive {
+    display: block;
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+  }
+
+/*==== Text ====*/
+.capitalize { text-transform: capitalize; }

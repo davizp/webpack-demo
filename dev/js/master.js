@@ -3,6 +3,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import '../sass/master.scss';
 
+// Setting Global Vars ==========================
+Object.assign(window, { React, ReactDOM });
 
 // _bind Helper =================================
 React.Component.prototype._bind = function _bind(...methods) {
@@ -22,3 +24,12 @@ React.Component.prototype._bind = function _bind(...methods) {
 //   runGlobal();
 // })();
 
+// 	console.log(module.hot, 'module.hot');
+
+// if (module.hot) {
+// 	console.log('hola a todos');
+// }
+
+if (module.hot) {
+	module.hot.accept()
+}
