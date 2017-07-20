@@ -2,7 +2,26 @@ const webpack = require('webpack');
 const path = require ('path');
 const glob = require("glob")
 const files = glob.sync('./js/**/*.js');
-const entryPoints = {};
+const entryPoints = {
+	// // activate HMR for React
+	//  rhl: 'react-hot-loader/patch',
+	//  client: 'webpack-dev-server/client?http://localhost:3000',
+ //    // bundle the client for webpack-dev-server
+ //    // and connect to the provided endpoint
+
+ //    ods: 'webpack/hot/only-dev-server'
+ //    // bundle the client for hot reloading
+ //    // only- means to only hot reload for successful updates
+
+ 	 app: [
+        // 'webpack-dev-server/client?http://localhost:3000',
+        // 'webpack/hot/only-dev-server',
+        'babel-polyfill',
+        'react-hot-loader/patch',
+        './js/viewLoader.js'
+    ]
+
+};
 
 files.map( entry => {
 	const location = entry.replace('.js','');
@@ -14,8 +33,11 @@ files.map( entry => {
 module.exports = {
 	entry: entryPoints,
 	plugins: [
+		// enable HMR globally
 		new webpack.HotModuleReplacementPlugin(),
-		// new webpack.NamedModulesPlugin()
+
+		// prints more readable module names in the browser console on HMR updates
+		new webpack.NamedModulesPlugin()
 	],
 	output: {
 		path: path.resolve(__dirname, '../web/assets/js'),
@@ -38,7 +60,7 @@ module.exports = {
 		},
 	},
 	watch: true,
-	devtool: 'source-map',
+	devtool: 'cheap-module-eval-source-map',
 	module: {
 		rules: [
 			{
@@ -46,22 +68,16 @@ module.exports = {
 				exclude: /node_modules$/,
 				use: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader']
 			},
+			// {
+			// 	test: /\.js$/,
+			// 	loader: 'eslint-loader',
+			// 	exclude: /node_modules/,
+			// 	enforce: 'pre'
+			// },
 			{
 				test: /\.js$/,
-				loader: 'eslint-loader',
-				exclude: /node_modules/,
-				enforce: 'pre'
-			},
-			{
-				test: /\.js$/,
-				loader: 'babel-loader',
-				// include: [
-				// 	path.resolve(__dirname, 'js'),
-				// ],
-				exclude: /node_modules$/,
-				query: {
-					presets: ['react', 'es2015']
-				}
+				use: ['babel-loader'],
+				exclude: /node_modules$/
 			}
 		]
 	}

@@ -14,6 +14,7 @@
     "ReactDOM": true,
     "define": true,
     "Validation": true,
+    "AppContainer": true,
     "_": true
   },
   "parserOptions": {

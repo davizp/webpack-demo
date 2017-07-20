@@ -1,6 +1,7 @@
 // Deps =========================================
 import React from 'react';
 import ReactDOM from 'react-dom';
+// import { AppContainer } from 'react-hot-loader';
 import '../sass/master.scss';
 
 // Setting Global Vars ==========================

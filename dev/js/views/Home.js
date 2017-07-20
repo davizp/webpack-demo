@@ -1,13 +1,9 @@
 // import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
+// import ReactDOM from 'react-dom';
 
 const { Component } = React;
 
-if (module.hot) {
-    module.hot.accept();
-}
-
-class Index extends Component {
+class Home extends Component {
     constructor(props) {
         super(props);
 
@@ -29,13 +25,10 @@ class Index extends Component {
             <div>
                 Counter: { this.state.counter }
                 <button onClick={ () => this.sum() }>Click Me!!!!!</button>
-                <span>asdasd</span>
+                <span>Please change this text!</span>
             </div>
         );
     }
 }
 
-ReactDOM.render(
-    <Index />,
-    document.querySelector('.vw-index')
-);
+export default Home;
