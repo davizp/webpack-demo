@@ -9,10 +9,10 @@ Object.assign(window, { React, ReactDOM });
 // _bind Helper =================================
 React.Component.prototype._bind = function _bind(...methods) {
 
-  methods.forEach((method) => {
+    methods.forEach((method) => {
 
-    this[method] = this[method].bind(this);
-  });
+        this[method] = this[method].bind(this);
+    });
 };
 
 // // Modules ======================================
@@ -24,12 +24,12 @@ React.Component.prototype._bind = function _bind(...methods) {
 //   runGlobal();
 // })();
 
-// 	console.log(module.hot, 'module.hot');
+//  console.log(module.hot, 'module.hot');
 
 // if (module.hot) {
-// 	console.log('hola a todos');
+//  console.log('hola a todos');
 // }
 
 if (module.hot) {
-	module.hot.accept()
+    module.hot.accept();
 }

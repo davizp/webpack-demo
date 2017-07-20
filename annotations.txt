@@ -1,0 +1,11 @@
+Is not neccessary to add
+```
+plugins: [
+	new webpack.HotModuleReplacementPlugin()
+],
+devServer: {
+	hot: true,
+}
+```
+
+if the server is run with the --hot option

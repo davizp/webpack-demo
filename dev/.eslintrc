@@ -1,5 +1,5 @@
 {
-  // "parser": "babel-eslint",
+  "parser": "babel-eslint",
   "env": {
     "browser": true,
     "node": true,
@@ -13,25 +13,30 @@
     "React": true,
     "ReactDOM": true,
     "define": true,
-    "Validation": true
+    "Validation": true,
+    "_": true
   },
-  "ecmaFeatures": {
-    "arrowFunctions": true,
-    "blockBindings": true,
-    "classes": true,
-    "defaultParams": true,
-    "destructuring": true,
-    "forOf": true,
-    "generators": false,
-    "modules": true,
-    "objectLiteralComputedProperties": true,
-    "objectLiteralDuplicateProperties": false,
-    "objectLiteralShorthandMethods": true,
-    "objectLiteralShorthandProperties": true,
-    "spread": true,
-    "superInFunctions": true,
-    "templateStrings": true,
-    "jsx": true
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaVersion": 6,
+    "ecmaFeatures": {
+      "arrowFunctions": true,
+      "blockBindings": true,
+      "classes": true,
+      "defaultParams": true,
+      "destructuring": true,
+      "forOf": true,
+      "generators": false,
+      "modules": true,
+      "objectLiteralComputedProperties": true,
+      "objectLiteralDuplicateProperties": false,
+      "objectLiteralShorthandMethods": true,
+      "objectLiteralShorthandProperties": true,
+      "spread": true,
+      "superInFunctions": true,
+      "templateStrings": true,
+      "jsx": true
+    },
   },
   "rules": {
     "no-var": 2,                     // http://eslint.org/docs/rules/no-var
@@ -136,7 +141,9 @@
       "self",
       "internals.self"
     ],
-    "indent": [2, 2, {"SwitchCase": 1}],
+    "indent": [2, 4, {               // http://eslint.org/docs/rules/indent
+      "SwitchCase": 1
+    }],
     "brace-style": [2,               // http://eslint.org/docs/rules/brace-style
       "1tbs", {
         "allowSingleLine": true

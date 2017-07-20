@@ -4,38 +4,38 @@ import ReactDOM from 'react-dom';
 const { Component } = React;
 
 if (module.hot) {
-	module.hot.accept()
+    module.hot.accept();
 }
 
 class Index extends Component {
-	constructor(props) {
-		super(props);
+    constructor(props) {
+        super(props);
 
-		this.sum = this.sum.bind(this);
+        this.sum = this.sum.bind(this);
 
-		this.state = {
-			counter: 0
-		};
-	}
+        this.state = {
+            counter: 0
+        };
+    }
 
-	sum() {
-		const counter = this.state.counter + 1;
+    sum() {
+        const counter = this.state.counter + 1;
 
-		this.setState({ counter });
-	}
+        this.setState({ counter });
+    }
 
-	render() {
-		return (
-			<div>
-				Counter: { this.state.counter }
-				<button onClick={ () => this.sum() }>Click Me!!!!!</button>
-				<span>f</span>
-			</div>
-		);
-	}
+    render() {
+        return (
+            <div>
+                Counter: { this.state.counter }
+                <button onClick={ () => this.sum() }>Click Me!!!!!</button>
+                <span>asdasd</span>
+            </div>
+        );
+    }
 }
 
 ReactDOM.render(
-  <Index />,
-  document.querySelector('.vw-index')
+    <Index />,
+    document.querySelector('.vw-index')
 );

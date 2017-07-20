@@ -1,13 +1,8 @@
 const webpack = require('webpack');
 const path = require ('path');
 const glob = require("glob")
-// const fs = require('fs');
-const entryPoints = {
-	hmr: 'webpack/hot/only-dev-server',
-	rhr:  'react-hot-loader/patch'
-};
-
 const files = glob.sync('./js/**/*.js');
+const entryPoints = {};
 
 files.map( entry => {
 	const location = entry.replace('.js','');
@@ -53,16 +48,8 @@ module.exports = {
 			},
 			{
 				test: /\.js$/,
-				loader: 'jshint-loader',
+				loader: 'eslint-loader',
 				exclude: /node_modules/,
-				options: {
-					eslint: {
-						// configFile: utils.root('.eslintrc'), // this is my helper for resolving paths
-						configFile: './.eslintrc', // this is my helper for resolving paths
-						cache: false
-					}
-					// eslintPath: path.join(__dirname, ".eslintrc"),
-				},
 				enforce: 'pre'
 			},
 			{
