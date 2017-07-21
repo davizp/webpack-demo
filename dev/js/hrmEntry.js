@@ -2,8 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { AppContainer } from 'react-hot-loader';
 
-import Root from './views/Home';
-
 const render = Component => {
     ReactDOM.render(
         <AppContainer>
@@ -13,8 +11,15 @@ const render = Component => {
     );
 };
 
-render(Root);
+const Root = require(`${_app.page.jsView}`).default;
+
 
 if (module.hot) {
-    module.hot.accept('./views/Home', () => { render(Root); });
+    module.hot.accept();
+
+    console.warn('index.js HMR');
+
+    // render(Root);
 }
+
+render(Root);

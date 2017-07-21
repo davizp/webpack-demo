@@ -31,6 +31,6 @@ React.Component.prototype._bind = function _bind(...methods) {
 //  console.log('hola a todos');
 // }
 
-if (module.hot) {
-    module.hot.accept();
-}
+// if (module.hot) {
+//     module.hot.accept();
+// }

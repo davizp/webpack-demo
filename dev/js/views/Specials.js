@@ -1,7 +1,6 @@
-// import React, { Component } from 'react';
 const { Component } = React;
 
-class Home extends Component {
+class Specials extends Component {
     constructor(props) {
         super(props);
 
@@ -21,11 +20,13 @@ class Home extends Component {
     render() {
         return (
             <div>
-                <h1>Index</h1>
+                <h1>Specials</h1>
+
                 Counter: { this.state.counter }
+
                 <p>
                     <button onClick={ () => this.sum() }>Click Me!</button>
-                    <br/><br/>
+                    <br/>
                     <span>Hola!</span>
                 </p>
             </div>
@@ -33,4 +34,4 @@ class Home extends Component {
     }
 }
 
-export default Home;
+export default Specials;

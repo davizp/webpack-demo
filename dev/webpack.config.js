@@ -3,22 +3,23 @@ const path = require ('path');
 const glob = require("glob")
 const files = glob.sync('./js/**/*.js');
 const entryPoints = {
-	// // activate HMR for React
-	//  rhl: 'react-hot-loader/patch',
-	//  client: 'webpack-dev-server/client?http://localhost:3000',
- //    // bundle the client for webpack-dev-server
- //    // and connect to the provided endpoint
-
- //    ods: 'webpack/hot/only-dev-server'
- //    // bundle the client for hot reloading
- //    // only- means to only hot reload for successful updates
 
  	 app: [
-        // 'webpack-dev-server/client?http://localhost:3000',
-        // 'webpack/hot/only-dev-server',
         'babel-polyfill',
+
+        // activate HMR for React
         'react-hot-loader/patch',
-        './js/viewLoader.js'
+
+        // bundle the client for webpack-dev-server
+    	// and connect to the provided endpoint
+        'webpack-dev-server/client?http://localhost:3000',
+
+        // bundle the client for hot reloading
+    	// only- means to only hot reload for successful updates
+        'webpack/hot/only-dev-server',
+
+        // is the index file
+        './js/hrmEntry.js'
     ]
 
 };
@@ -68,12 +69,12 @@ module.exports = {
 				exclude: /node_modules$/,
 				use: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader']
 			},
-			// {
-			// 	test: /\.js$/,
-			// 	loader: 'eslint-loader',
-			// 	exclude: /node_modules/,
-			// 	enforce: 'pre'
-			// },
+			{
+				test: /\.js$/,
+				loader: 'eslint-loader',
+				exclude: /node_modules/,
+				enforce: 'pre'
+			},
 			{
 				test: /\.js$/,
 				use: ['babel-loader'],
