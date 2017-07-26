@@ -1,0 +1,55 @@
+/*
+// Font Icons
+// ------------------------------------------------ */
+
+//==== Base ====//
+  [class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: $font-icons-name !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+//==== Chevrons ====//
+// 24 xl
+// 20 lg
+// 14 md
+// 9 sm
+[class^="chevron-"], [class*=" chevron-"] {
+    display: inline-block;
+
+    &::before {
+        // position: relative;
+        // top: 50%;
+        display: inline-block;
+        border-color: color(blue);
+        border-style: solid;
+        transform: rotate(-45deg);
+        content: '';
+    }
+    &.right::before {
+        transform: rotate(45deg);
+    }
+    &.bottom::before {
+        transform: rotate(135deg);
+    }
+    &.left::before {
+        left: 0.25em;
+        transform: rotate(-135deg);
+    }
+}
+.chevron-sm::before { @include chevron-size(9px); }
+.chevron-md::before { @include chevron-size(14px); }
+.chevron-lg::before { @include chevron-size(20px); }
+.chevron-xl::before { @include chevron-size(24px); }
+
+
+//==== Mappings ====//

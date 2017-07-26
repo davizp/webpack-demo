@@ -4,24 +4,23 @@ const glob = require("glob")
 const files = glob.sync('./js/**/*.js');
 const entryPoints = {
 
- 	 app: [
-        'babel-polyfill',
+	'./js/app': [
+		'babel-polyfill',
 
-        // activate HMR for React
-        'react-hot-loader/patch',
+		// activate HMR for React
+		'react-hot-loader/patch',
 
-        // bundle the client for webpack-dev-server
-    	// and connect to the provided endpoint
-        'webpack-dev-server/client?http://localhost:3000',
+		// bundle the client for webpack-dev-server
+		// and connect to the provided endpoint
+		'webpack-dev-server/client?http://localhost:3000',
 
-        // bundle the client for hot reloading
-    	// only- means to only hot reload for successful updates
-        'webpack/hot/only-dev-server',
+		// bundle the client for hot reloading
+		// only- means to only hot reload for successful updates
+		'webpack/hot/only-dev-server',
 
-        // is the index file
-        './js/hrmEntry.js'
-    ]
-
+		// is the index file
+		'./js/hrmEntry.js'
+	]
 };
 
 files.map( entry => {
@@ -38,10 +37,16 @@ module.exports = {
 		new webpack.HotModuleReplacementPlugin(),
 
 		// prints more readable module names in the browser console on HMR updates
-		new webpack.NamedModulesPlugin()
+		new webpack.NamedModulesPlugin(),
+		
+
+		// new webpack.optimize.CommonsChunkPlugin({ name: 'vendor', filename: '[name].js', minChunks: Infinity }),
+		
+		new webpack.optimize.CommonsChunkPlugin({ name: './js/vendor', filename: '[name].js', minChunks: Infinity }),
+
 	],
 	output: {
-		path: path.resolve(__dirname, '../web/assets/js'),
+		path: path.resolve(__dirname, '../web/assets/'),
 		filename: '[name].js',
 		publicPath: '/assets/'
 	},
@@ -54,8 +59,8 @@ module.exports = {
 		port: 3000,
 		stats: {
 			chunks: false
-  		},
-  		overlay: {
+		},
+		overlay: {
 			errors: true
 			// warnings: true
 		},

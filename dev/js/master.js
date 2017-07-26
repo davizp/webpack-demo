@@ -15,22 +15,3 @@ React.Component.prototype._bind = function _bind(...methods) {
         this[method] = this[method].bind(this);
     });
 };
-
-// // Modules ======================================
-// import runGlobal from './modules/global';
-
-// // Kickstart app ================================
-// (() => {
-
-//   runGlobal();
-// })();
-
-//  console.log(module.hot, 'module.hot');
-
-// if (module.hot) {
-//  console.log('hola a todos');
-// }
-
-// if (module.hot) {
-//     module.hot.accept();
-// }

@@ -7,6 +7,8 @@ class Home extends Component {
 
         this._bind('sum');
 
+        console.log(this._bind);
+
         this.state = {
             counter: 0
         };
@@ -26,7 +28,7 @@ class Home extends Component {
                 <p>
                     <button onClick={ () => this.sum() }>Click Me!</button>
                     <br/><br/>
-                    <span>Hola!</span>
+                    <span>Hola Mundoss!</span>
                 </p>
             </div>
         );

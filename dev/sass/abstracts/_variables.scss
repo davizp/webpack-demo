@@ -1,0 +1,125 @@
+/*
+// Variables
+// ------------------------------------------------ */
+
+/*==== Paths ====*/
+$assets-path           : '/assets';
+$path: (
+  img                  : '#{$assets-path}/img',
+  fonts                : '#{$assets-path}/fonts',
+  svg                  : '#{$assets-path}/svg'
+);
+
+/*==== Scafolding ====*/
+$body-bg               : #ededed;
+$link-color            : color(grey, darker-2) !default;
+$link-hover-color      : lighten($link-color, 15%) !default;
+$link-hover-decoration : none !default;
+$mm-height             : 6.6rem; // Main Menu
+$mm-sub-height         : 4rem; // Main Menu
+
+$spacer                : 1rem !default;
+$radius: (
+  sm                   : .3rem,
+  md                   : .5rem,
+  lg                   : 1rem
+);
+
+$z-layers: (
+  bottomless-pit       : -9999,
+  before               : 0,
+  default              : 1,
+  after                : 2,
+  header               : 10,
+  dropdown             : 3000,
+  overlay              : 4000,
+  modal                : 4001,
+  drama                : 9999
+);
+
+$transition-duration   : .3s;
+
+//==== Components ====//
+$padding: (
+  base: (
+    vertical           : 6px,
+    horizontal         : 12px
+  ),
+  lg: (
+    vertical           : 10px,
+    horizontal         : 16px
+  ),
+  md: (
+    vertical           : 7px,
+    horizontal         : 14px
+  ),
+  sm: (
+    vertical           : 5px,
+    horizontal         : 10px
+  ),
+  xs: (
+    vertical           : 1px,
+    horizontal         : 5px
+  )
+);
+
+//==== Forms ====//
+$input-padding-x       : 1rem !default;
+$input-padding-y       : .8rem !default;
+$input-line-height     : 1.25 !default;
+
+/*==== Typography ====*/
+$font-cache            : 'v=#{unique-id()}';
+$font-icons-name       : 'ProjectsName-Icons';
+$font-os-light-name    : 'OpenSans-Light';
+$font-os-regular-name  : 'OpenSans-Regular';
+$font-os-semibold-name : 'OpenSans-Semibold';
+$font-os-bold-name     : 'OpenSans-Bold';
+$font-os-light         : $font-os-light-name, sans-serif !default;
+$font-os-regular       : $font-os-regular-name, sans-serif !default;
+$font-os-semibold      : $font-os-semibold-name, sans-serif !default;
+$font-os-bold          : $font-os-bold-name, sans-serif !default;
+$font-icons            : $font-icons-name, sans-serif !default;
+$font-arial            : Arial, Helvetica, sans-serif !default;
+$font-base             : $font-os-regular !default;
+$font-color            : color(grey, darker-2) !default;
+$font-weight           : 400 !default;
+$font-size             : 1.5rem !default;
+$line-height           : 2rem !default;
+
+$font-size-h1          : 0rem !default;
+$font-size-h2          : 8.5rem !default;
+$font-size-h3          : 6.5rem !default;
+$font-size-h4          : 5rem !default;
+$font-size-h5          : 3.6rem !default;
+$font-size-h6          : 2rem !default;
+
+$headings-margin       : (1rem / 2) !default;
+$headings-font-family  : $font-os-light !default;
+$headings-font-weight  : 500 !default;
+$headings-line-height  : 1.1 !default;
+$headings-color        : inherit !default;
+
+/*==== Breakpoints ====*/
+$breakpoints: (
+  xsmall               : 320px,
+  small                : 375px,
+  medium               : 425px,
+  large                : 768px, // tablet
+  xlarge               : 1024px, // desktop
+  xxl                  : 1400px
+);
+
+/*==== Grid System ====*/
+$container-width       : 1180px;
+$width-xs              : 30 !default;
+$width-sm              : 48 !default;
+$width-md              : 62 !default;
+$width-lg              : 75 !default;
+$width-xl              : 80 !default;
+
+$viewport-xs           : map-get($breakpoints, xsmall) !default;
+$viewport-sm           : map-get($breakpoints, small) !default;
+$viewport-md           : map-get($breakpoints, medium) !default;
+$viewport-lg           : map-get($breakpoints, large) !default;
+$viewport-xl           : map-get($breakpoints, xlarge) !default;

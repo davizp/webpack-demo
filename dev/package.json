@@ -4,7 +4,8 @@
   "description": "",
   "main": "webpack.config.js",
   "scripts": {
-    "build": "webpack",
+    "prod": "webpack --config wpProd.webpack.config.js",
+    "server": "cd ../web && open http://localhost:8000/WEB-INF/templates/views/ && python -m SimpleHTTPServer 8000",
     "start": "webpack-dev-server --open"
   },
   "author": "David Nuñez",
@@ -33,6 +34,7 @@
     "webpack-dev-server": "^2.5.1"
   },
   "dependencies": {
+    "card-validator": "^4.1.0",
     "babel-polyfill": "^6.23.0",
     "jshint": "^2.9.5",
     "jshint-loader": "^0.8.4",

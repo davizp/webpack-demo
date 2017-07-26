@@ -1,13 +1,30 @@
 
 // Abstracts ====================================
+@import
+  'abstracts/colors',
+  'abstracts/functions',
+  'abstracts/variables',
+  'abstracts/mixins',
+  'abstracts/utils';
+
 // Vendors ======================================
+
 // Base =========================================
 @import
-	'base/normalize';
-// Layout =======================================
-// Components ===================================
-// Pages ========================================
+  'base/normalize',
+  'base/basic',
+  'base/fonts',
+  'base/icons',
+  'base/typography';
 
-body {
-	// background: blue;
-}
+// Layout =======================================
+@import
+  'layout/grid',
+  'layout/header',
+  'layout/footer';
+
+// Components ===================================
+
+// Pages ========================================
+@import
+  'pages/home';

@@ -1,0 +1,57 @@
+/*
+// Font Families
+// ------------------------------------------------ */
+
+// Font Icons ===================================
+@font-face {
+    font-family: $font-icons-name;
+    src: url('#{map-get($path, fonts)}/#{$font-icons-name}/fonts/#{$font-icons-name}.eot?#{$font-cache}');
+    src: url('#{map-get($path, fonts)}/#{$font-icons-name}/fonts/#{$font-icons-name}.eot?#{$font-cache}#iefix') format('embedded-opentype'),
+         url('#{map-get($path, fonts)}/#{$font-icons-name}/fonts/#{$font-icons-name}.ttf?#{$font-cache}') format('truetype'),
+         url('#{map-get($path, fonts)}/#{$font-icons-name}/fonts/#{$font-icons-name}.woff?#{$font-cache}') format('woff'),
+         url('#{map-get($path, fonts)}/#{$font-icons-name}/fonts/#{$font-icons-name}.svg?#{$font-cache}#sandals') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+// Open Sans ====================================
+@font-face {
+    font-family: $font-os-light-name;
+    src: url('#{map-get($path, fonts)}/OpenSans/Light/#{$font-os-light-name}.eot?#{$font-cache}');
+    src: url('#{map-get($path, fonts)}/OpenSans/Light/#{$font-os-light-name}.eot?#{$font-cache}#iefix') format('embedded-opentype'),
+         url('#{map-get($path, fonts)}/OpenSans/Light/#{$font-os-light-name}.ttf?#{$font-cache}') format('truetype'),
+         url('#{map-get($path, fonts)}/OpenSans/Light/#{$font-os-light-name}.woff?#{$font-cache}') format('woff'),
+         url('#{map-get($path, fonts)}/OpenSans/Light/#{$font-os-light-name}.svg?#{$font-cache}#sandals') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: $font-os-regular-name;
+    src: url('#{map-get($path, fonts)}/OpenSans/Regular/#{$font-os-regular-name}.eot?#{$font-cache}');
+    src: url('#{map-get($path, fonts)}/OpenSans/Regular/#{$font-os-regular-name}.eot?#{$font-cache}#iefix') format('embedded-opentype'),
+         url('#{map-get($path, fonts)}/OpenSans/Regular/#{$font-os-regular-name}.ttf?#{$font-cache}') format('truetype'),
+         url('#{map-get($path, fonts)}/OpenSans/Regular/#{$font-os-regular-name}.woff?#{$font-cache}') format('woff'),
+         url('#{map-get($path, fonts)}/OpenSans/Regular/#{$font-os-regular-name}.svg?#{$font-cache}#sandals') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: $font-os-semibold-name;
+    src: url('#{map-get($path, fonts)}/OpenSans/Semibold/#{$font-os-semibold-name}.eot?#{$font-cache}');
+    src: url('#{map-get($path, fonts)}/OpenSans/Semibold/#{$font-os-semibold-name}.eot?#{$font-cache}#iefix') format('embedded-opentype'),
+         url('#{map-get($path, fonts)}/OpenSans/Semibold/#{$font-os-semibold-name}.ttf?#{$font-cache}') format('truetype'),
+         url('#{map-get($path, fonts)}/OpenSans/Semibold/#{$font-os-semibold-name}.woff?#{$font-cache}') format('woff'),
+         url('#{map-get($path, fonts)}/OpenSans/Semibold/#{$font-os-semibold-name}.svg?#{$font-cache}#sandals') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: $font-os-bold-name;
+    src: url('#{map-get($path, fonts)}/OpenSans/Bold/#{$font-os-bold-name}.eot?#{$font-cache}');
+    src: url('#{map-get($path, fonts)}/OpenSans/Bold/#{$font-os-bold-name}.eot?#{$font-cache}#iefix') format('embedded-opentype'),
+         url('#{map-get($path, fonts)}/OpenSans/Bold/#{$font-os-bold-name}.ttf?#{$font-cache}') format('truetype'),
+         url('#{map-get($path, fonts)}/OpenSans/Bold/#{$font-os-bold-name}.woff?#{$font-cache}') format('woff'),
+         url('#{map-get($path, fonts)}/OpenSans/Bold/#{$font-os-bold-name}.svg?#{$font-cache}#sandals') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}

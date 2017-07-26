@@ -27,7 +27,7 @@ class Specials extends Component {
                 <p>
                     <button onClick={ () => this.sum() }>Click Me!</button>
                     <br/>
-                    <span>Hola!</span>
+                    <span>:D</span>
                 </p>
             </div>
         );

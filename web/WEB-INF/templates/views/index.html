@@ -2,9 +2,10 @@
 <html>
 <head>
 	<title>Webpack</title>
+	<link rel="stylesheet" type="text/css" href="/assets/css/master.css">
 </head>
 <body>
-	<div class="vw-index"></div>
+	<div id="root" class="vw-index"></div>
 	<script>
 		window._app = {
 			page: {
@@ -12,7 +13,8 @@
 			}
 		};
 	</script>
+	<script src="/assets/js/vendor.js" defer></script>
 	<script src="/assets/js/master.js" defer></script>
-	<script src="/assets/app.js" defer></script>
+	<script src="/assets/js/app.js" defer></script>
 </body>
 </html>
